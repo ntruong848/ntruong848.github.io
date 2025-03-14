@@ -12,6 +12,152 @@
             font-family: Arial, sans-serif;
         }
         body {
+            background-color: #fff;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 25px;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #444;
+        }
+        .portfolio-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        .portfolio-item {
+            background: white;
+            padding: 20px;
+            flex: 1 1 calc(50% - 40px);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Nicholas Truong</h2>
+            <nav>
+                <ul>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+            <h1>Hi, I'm Nicholas</h1>
+            <p>Power BI Developer | Technical Writer | Full Stack Developer in Training </p>
+            <img src="/img/linkedinprofile.png" alt="Profile Pic">
+            <a href="https://www.linkedin.com/in/nltruong" class="btn">LinkedIn</a>
+        </section>
+        <section id="portfolio" class="portfolio-section">
+            <div class="portfolio-item">
+                <img src="img/article1cover.png" alt="Article 1" style="width:600px;height:280px">
+                <li><a href="https://www.linkedin.com/pulse/applications-rich-storytelling-sales-techniques-your-truong-p-eng--uqkqc/?trackingId=yBfPGb%2FcS0K6W9JtKEddpw%3D%3D">The Applications of Rich Storytelling and Sales Techniques to Promote Your Brand, Products and Ideas</a></li>
+                <p>Article 1</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="/img/article2cover.png" alt="Article 2" style="width:600px;height:280px">
+                <li><a href="https://www.linkedin.com/pulse/power-teamwork-accelerated-networking-practices-truong-p-eng--ljpwc/?trackingId=yBfPGb%2FcS0K6W9JtKEddpw%3D%3D">The Power of Teamwork in Accelerated Networking Practices</a></li>
+                <p>Article 2</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="/img/article3cover.png" alt="Article 3" style="width:600px;height:280px">
+                <li><a href="https://www.linkedin.com/pulse/power-teamwork-accelerated-networking-practices-truong-p-eng--ljpwc/?trackingId=yBfPGb%2FcS0K6W9JtKEddpw%3D%3D">The Power of Teamwork in Accelerated Networking Practices</a></li>
+                <p>Article 3</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="/img/article4cover.png" alt="Article 4" style="width:600px;height:280px">
+                <li><a href="https://www.linkedin.com/pulse/importance-micro-breaks-workplace-achieve-paramount-truong-p-eng--zbryc/?trackingId=0hNwekgvRZirSjeDulp8Wg%3D%3D">The Importance of Micro Breaks in the Workplace to Achieve Paramount Results</a></li>
+                <p>Article 4</p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Nicholas Truong. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nicholas Truong</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
             background-color: #f4f4f4;
             color: #333;
         }
@@ -106,7 +252,7 @@
         </section>
     </div>
 </body>
-</html>
+</html> -->
 
 <!-- <!DOCTYPE html>
 <html lang="en">
