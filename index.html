@@ -71,6 +71,11 @@
             font-weight: bold;
         }
 
+        .hero h3 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
         .hero p {
             margin-top: 10px;
             font-size: 1.5rem;
@@ -129,7 +134,7 @@
         /* Portfolio Section */
         .portfolio-section {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 80px;
         }
 
         .portfolio-item {
@@ -235,9 +240,9 @@
             <h2>Nicholas Truong</h2>
             <nav>
                 <ul>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -245,35 +250,40 @@
         </header>
 
         <section class="hero">
-            <h1>Hi, I'm Nicholas</h1>
-            <p>Power BI Developer | Technical Writer | Full Stack Developer in Training</p>
+            <h1>Hi, I'm Nick</h1>
+            <p>Business Analyst | Technical Writer | Full Stack Developer in Training</p>
             <img src="/img/linkedinprofile.png" alt="Profile Picture">
             <a href="https://www.linkedin.com/in/nltruong" class="btn" target="_blank">LinkedIn</a>
             <a href="https://github.com/ntruong848" class="btn" target="_blank">GitHub</a>
         </section>
-        
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>I am a Business Analyst and developer, skilled in Power BI, Excel, SQL and passionate in front-end design. I enjoy transforming data into actionable insights, documenting my learnings into informative articles, collaborating with others and creating interactive digital experiences.</p>
+        </section>
+
         <section id="portfolio" class="portfolio-section">
             <div class="portfolio-item">
                 <a href="https://www.linkedin.com/pulse/applications-rich-storytelling-sales-techniques-your-truong-p-eng--uqkqc/">
-                    <img src="img/article1cover.png" alt="Article 1">
+                    <img src="img/article1cover.png" alt="Article 1" style="width:600px;height:300px">
                     <h3>The Applications of Rich Storytelling and Sales Techniques to Promote Your Brand, Products and Ideas</h3>
                 </a>
             </div>
             <div class="portfolio-item">
                 <a href="https://www.linkedin.com/pulse/power-teamwork-accelerated-networking-practices-truong-p-eng--ljpwc/">
-                    <img src="img/article2cover.png" alt="Article 2">
+                    <img src="img/article2cover.png" alt="Article 2" style="width:600px;height:300px">
                     <h3>The Power of Teamwork in Accelerated Networking Practices</h3>
                 </a>
             </div>
             <div class="portfolio-item">
                 <a href="https://www.linkedin.com/pulse/beauty-applying-data-driven-decisions-real-life-truong-p-eng--burpc/">
-                    <img src="img/article3cover.png" alt="Article 3">
+                    <img src="img/article3cover.png" alt="Article 3" style="width:600px;height:300px">
                     <h3>The Beauty of Applying Data Driven Decisions in Real Life</h3>
                 </a>
             </div>
             <div class="portfolio-item">
                 <a href="https://www.linkedin.com/pulse/importance-micro-breaks-workplace-achieve-paramount-truong-p-eng--zbryc/">
-                    <img src="img/article4cover.png" alt="Article 4">
+                    <img src="img/article4cover.png" alt="Article 4" style="width:600px;height:300px">
                     <h3>The Importance of Microbreaks in the Workplace to Achieve Paramount Results</h3>
                 </a>
             </div>
@@ -295,11 +305,6 @@
                     <div class="skill-tile">Communication</div>
                     <div class="skill-tile">Servant Leadership</div>
                 </div>
-            </section>
-    
-            <section id="about" class="about-section">
-                <h2>About Me</h2>
-                <p>I am a Business Analyst and developer, skilled in Power BI, Excel, SQL and passionate in front-end design. I enjoy transforming data into actionable insights, collaborating with my stakeholders and creating interactive digital experiences.</p>
             </section>
     
             <section id="contact" class="contact-section">
@@ -346,6 +351,22 @@
                     button.textContent = "Toggle Dark Mode";
                 }
             };
+
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const headerOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
         </script>
     </div>
 </body>
