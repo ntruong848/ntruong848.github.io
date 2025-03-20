@@ -82,13 +82,23 @@
             color: #666;
         }
 
+        /* Enlarged Profile Picture (50% larger) */
         .hero img {
-            width: 150px;
-            height: 150px;
+            width: 225px;  /* Increased from 150px */
+            height: 225px; /* Increased from 150px */
             border-radius: 50%;
             margin-top: 20px;
         }
 
+        /* Social Links: Row Alignment & Centered */
+        .social-links {
+            display: flex;
+            flex-direction: row;  /* Align items in a row */
+            justify-content: center;  /* Center items */
+            align-items: center;
+            gap: 10px;  /* Space between buttons */
+            margin-top: 15px; /* Add space below the profile picture */
+        }
         .btn {
             display: inline-block;
             margin: 10px;
@@ -252,9 +262,15 @@
         <section class="hero">
             <h1>Hi, I'm Nick</h1>
             <p>Business Analyst | Technical Writer | Full Stack Developer in Training</p>
+            
+            <!-- Enlarged Profile Picture -->
             <img src="/img/linkedinprofile.png" alt="Profile Picture">
-            <a href="https://www.linkedin.com/in/nltruong" class="btn" target="_blank">LinkedIn</a>
-            <a href="https://github.com/ntruong848" class="btn" target="_blank">GitHub</a>
+            
+            <!-- Social Links: Stacked Buttons -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nltruong" class="btn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/ntruong848" class="btn" target="_blank">GitHub</a>
+            </div>
         </section>
 
         <section id="about" class="about-section">

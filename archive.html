@@ -1,3 +1,379 @@
+<!-- LinkedIn and Github Buttons to be optimized to row format, under profile picture
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nicholas Truong</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            scroll-behavior: smooth;
+        }
+
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .dark-mode header {
+            background: #222;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero h3 {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: #000;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: 2px solid #000;
+            color: #000;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .dark-mode .toggle-btn {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .toggle-btn:hover {
+            background: #000;
+            color: white;
+        }
+
+        .dark-mode .toggle-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .portfolio-item {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item a {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .dark-mode .portfolio-item a {
+            color: white;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tile {
+            background: #000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .dark-mode .skill-tile {
+            background: white;
+            color: black;
+        }
+
+        /* About Section */
+        .about-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input, textarea {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+        }
+
+        .dark-mode footer {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Nicholas Truong</h2>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="toggle-btn" id="theme-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </header>
+
+        <section class="hero">
+            <h1>Hi, I'm Nick</h1>
+            <p>Business Analyst | Technical Writer | Full Stack Developer in Training</p>
+            <img src="/img/linkedinprofile.png" alt="Profile Picture">
+            <a href="https://www.linkedin.com/in/nltruong" class="btn" target="_blank">LinkedIn</a>
+            <a href="https://github.com/ntruong848" class="btn" target="_blank">GitHub</a>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>I am a Business Analyst and developer, skilled in Power BI, Excel, SQL and passionate in front-end design. I enjoy transforming data into actionable insights, documenting my learnings into informative articles, collaborating with others and creating interactive digital experiences.</p>
+        </section>
+
+        <section id="portfolio" class="portfolio-section">
+            <div class="portfolio-item">
+                <a href="https://www.linkedin.com/pulse/applications-rich-storytelling-sales-techniques-your-truong-p-eng--uqkqc/">
+                    <img src="img/article1cover.png" alt="Article 1" style="width:600px;height:300px">
+                    <h3>The Applications of Rich Storytelling and Sales Techniques to Promote Your Brand, Products and Ideas</h3>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://www.linkedin.com/pulse/power-teamwork-accelerated-networking-practices-truong-p-eng--ljpwc/">
+                    <img src="img/article2cover.png" alt="Article 2" style="width:600px;height:300px">
+                    <h3>The Power of Teamwork in Accelerated Networking Practices</h3>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://www.linkedin.com/pulse/beauty-applying-data-driven-decisions-real-life-truong-p-eng--burpc/">
+                    <img src="img/article3cover.png" alt="Article 3" style="width:600px;height:300px">
+                    <h3>The Beauty of Applying Data Driven Decisions in Real Life</h3>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="https://www.linkedin.com/pulse/importance-micro-breaks-workplace-achieve-paramount-truong-p-eng--zbryc/">
+                    <img src="img/article4cover.png" alt="Article 4" style="width:600px;height:300px">
+                    <h3>The Importance of Microbreaks in the Workplace to Achieve Paramount Results</h3>
+                </a>
+            </div>
+        </section>
+    
+            <section id="skills" class="skills-section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-tile">Power BI 📊⚡</div>
+                    <div class="skill-tile">Excel 📗📈</div>
+                    <div class="skill-tile">SQL 🗄️🔍</div>
+                    <div class="skill-tile">Data Visualization 📊✅</div>
+                    <div class="skill-tile">Business Intelligence 🧠📈</div>
+                    <div class="skill-tile">Stakeholder Engagement 🤝💬</div>
+                    <div class="skill-tile">Project Management 📅✅</div>
+                    <div class="skill-tile">Front End Development 🖥️🎨</div>
+                    <div class="skill-tile">Technical Writing ✍️📜</div>
+                    <div class="skill-tile">Problem Solving 🧩💡</div>
+                    <div class="skill-tile">Communication 🗣️📢</div>
+                    <div class="skill-tile">Servant Leadership 🤲🌟</div>
+                </div>
+            </section>
+    
+            <section id="contact" class="contact-section">
+                <h2>Contact Me</h2>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Nicholas Truong. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function toggleDarkMode() {
+                const body = document.body;
+                const button = document.getElementById("theme-toggle");
+
+                body.classList.toggle("dark-mode");
+                
+                // Save user preference to local storage
+                if (body.classList.contains("dark-mode")) {
+                    localStorage.setItem("theme", "dark");
+                    button.textContent = "Toggle Light Mode ☀️";
+                } else {
+                    localStorage.setItem("theme", "light");
+                    button.textContent = "Toggle Dark Mode 🌙";
+                }
+            }
+
+            // Load saved theme preference on page load
+            window.onload = function () {
+                const savedTheme = localStorage.getItem("theme");
+                const button = document.getElementById("theme-toggle");
+
+                if (savedTheme === "dark") {
+                    document.body.classList.add("dark-mode");
+                    button.textContent = "Toggle Light Mode ☀️";
+                } else {
+                    button.textContent = "Toggle Dark Mode 🌙";
+                }
+            };
+
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        const headerOffset = document.querySelector('header').offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+        </script>
+    </div>
+</body>
+</html> -->
+
 <!-- 
 <!-- <!DOCTYPE html>
 <html lang="en">
